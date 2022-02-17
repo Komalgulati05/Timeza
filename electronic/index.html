@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <script>
+        let a;
+        let date;
+        let time;
+        setInterval(() => {
+        let dest= new Date("Feb 20,2022 10:00:00").getTime();
+        let cur = new Date().getTime(); 
+        let diff=dest-cur; // it will be in millisec
+      
+        let days=Math.floor(diff/(3600*24*1000));
+        let hr=Math.floor(diff%(1000*3600*24)/(3600*1000));
+        let min=Math.floor(diff%(1000*3600)/(1000*60));
+        let sec=Math.floor(diff%(1000*60)/(1000));
+        document.getElementById("time").innerHTML = days +"d, " + hr +"hrs: " +min +"m: "+sec +"s "
+         }, 1000);
+  </script>
+</head>
+<body background="./images/Desktop - 2 (4).svg" >
+    <div class="container">
+        <div class="rectangle-7">
+            <div class="navbar">
+            
+                    <!-- <img src="LOGO.png" alt="image not found" width="120" height="120">   -->
+               
+                <div class="right">
+                    
+                   
+                    <ul>
+                        <li class="left"><a href="#" >FitBit</a></li>
+                        <!-- <li><a href="#"> <h1 class="left">VintageHands</h1></a></li> -->
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Features</a></li>
+                        <button class="btn">  <li><a href="#">Login</a></li></button>
+                        <button  class="btn"> <li><a href="#">SignUp</a></li></button>
+                        
+                    </ul>
+                </div>
+              
+        </div>
+        <!-- <div class="back">
+            <h1> Slogan of the company</h1>
+         <img src="./images/background.jpg" id="back" alt="">           
+        </div> -->
+        <div class="mid">
+            <div class="one">
+                New Collection
+            </div>
+            <div class="head">
+              Smart Watch
+            </div>
+         
+            <div class="two">
+                Discover the future of time
+            </div>
+            <div class="three">
+                With the industry’s full-color smartwatch, you can enjoy a more colorful and creative view of your world.
+            </div>
+            <div class="launch">
+                Launching in :
+                <button class="gr"> <span id="time"></span></button>
+            </div>
+            <h3 ></h3>
+        </div>
+        <!-- <img src="./images/white2-removebg-preview (1).png" alt="">
+        <img src="./images/new.png" id="watch" alt=""> -->
+        <img  class="img" src="./images/watch_two-removebg-preview.png" alt="">
+        </div>
+</body>
+</html>
+
